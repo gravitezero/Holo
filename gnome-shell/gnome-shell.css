@@ -21,11 +21,12 @@
 stage {
     font-family: 'Roboto-Regular', Ubuntu, cantarell, sans-serif;
     font-weight: normal;
+    color: white;
 }
 
 .shell-link {
     color: #33B5E5;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .shell-link:hover {
@@ -336,7 +337,7 @@ StTooltip StLabel {
 
 #panelActivities {
     border: none;
-    background-image: url("start.svg");
+    background-image: url("assets/start.svg");
     background-position: center center;
     width: 56px;
     height: 24px;
@@ -434,7 +435,7 @@ StTooltip StLabel {
 
 /* Shared button properties */
 
-.dash-search-button, .notification-button, .notification-icon-button,
+/*.dash-search-button, .notification-button, .notification-icon-button,
 .hotplug-notification-item, .hotplug-resident-eject-button,
 .modal-dialog-button {
     color: white;
@@ -460,8 +461,62 @@ StTooltip StLabel {
 .hotplug-notification-item:active, .hotplug-resident-eject-button:active,
 .modal-dialog-button:active, .modal-dialog-button:pressed {
     border-image: url('assets/button-active.svg') 5 5 5 5 stretch;
+}*/
+
+
+/* Buttons */
+
+.dash-search-button,
+.notification-button,
+.notification-icon-button,
+.hotplug-notification-item,
+.hotplug-resident-eject-button,
+.modal-dialog-button {
+    border: 1px solid #101010;
+    padding: 3px 18px;
+    border-radius: 2px;
+    transition-duration: 150;
+    background: #242424;
+    box-shadow: inset 0 1px 0 0 #333;
 }
 
+.dash-search-button:hover,
+.notification-button:hover,
+.notification-icon-button:hover,
+.hotplug-notification-item:hover,
+.hotplug-resident-eject-button:hover,
+.modal-dialog-button:hover {
+    background: #0099CC;
+    box-shadow: inset 0 1px 0 0 #00BBFF;
+}
+
+.login-dialog .modal-dialog-button:focus,
+.login-dialog .modal-dialog-button:default,
+.dash-search-button:selected,
+.dash-search-button:focus,
+.notification-button:focus,
+.notification-icon-button:focus,
+.hotplug-notification-item:focus,
+.modal-dialog-button:focus {
+    border: 1px solid #33b5e5;
+}
+
+.dash-search-button:active,
+.dash-search-button:pressed,
+.notification-button:active,
+.notification-icon-button:active,
+.hotplug-notification-item:active,
+.hotplug-resident-eject-button:active,
+.modal-dialog-button:active,
+.modal-dialog-button:pressed {
+    box-shadow: inset 0 1px 0 0 #0099CC;
+    background: #006699;
+}
+
+.notification-icon-button:insensitive,
+.notification-button:insensitive {
+    color: #9f9f9f;
+}
 
 /* Overview */
 
@@ -583,6 +638,35 @@ StTooltip StLabel {
     padding: 0 25px 1em 0;
 }*/
 
+#searchEntry,
+.notification StEntry,
+.login-dialog-prompt-entry,
+.prompt-dialog-password-entry {
+    padding: 5px 6px;
+    color: rgba(255,255,255,0.5);
+    font: 9pt;
+    height: 18px;
+    width: 340px;
+    border-image: url("assets/search-entry.svg") 6 6 6 6 stretch;
+}
+
+#searchEntry:hover,
+.notification StEntry:hover,
+.login-dialog-prompt-entry:hover,
+.prompt-dialog-password-entry:hover {
+    color: #fff;
+    border-image: url("assets/search-entry-hover.svg") 6 6 6 6 stretch;
+}
+
+#searchEntry:focus,
+.notification StEntry:focus,
+.prompt-dialog-password-entry:focus,
+.login-dialog-prompt-entry:focus {
+    /*border: 2px solid #3465a4;*/
+    color: #fff;
+    border-image: url("assets/search-entry-focus.svg") 6 6 6 6 stretch;
+}
+/*
 #searchEntry {
 		padding: 5px 6px;
 		color: rgba(255,255,255,0.5);
@@ -601,7 +685,7 @@ StTooltip StLabel {
 #searchEntry:focus {
 		color: #fff;
   	border-image: url("assets/search-entry-focus.svg") 6 6 6 6 stretch;
-}
+}*/
 
 .search-entry-icon {
 	icon-size: 1em;
@@ -2181,7 +2265,7 @@ StTooltip StLabel {
 
 #LookingGlassPropertyInspector {
     background: rgba(0, 0, 0, 0.7);
-    border-radius: 3px;
+    border-radius: 2px;
     border: 1px solid #333;
     padding: 6px;
     color: #FFF;
@@ -2250,25 +2334,303 @@ StTooltip StLabel {
     box-shadow: 0px 1px 4px 2px rgba(0,0,0,0.5);
 }
 
+/* Login Dialog */
+
+.login-dialog-banner {
+    font-size: 10pt;
+    font-weight: 100;
+    text-align: center;
+    color: #666666;
+    padding-bottom: 1em;
+}
+
+.login-dialog-title {
+    font-size: 14pt;
+    font-weight: 100;
+    color: #666666;
+    padding-bottom: 2em;
+}
+
+.login-dialog {
+    /* Reset border and background */
+    border: none;
+    background-color: transparent;
+
+    border-radius: 2px;
+    min-height: 150px;
+    max-height: 700px;
+    min-width: 350px;
+}
+
+.login-dialog-prompt-login-hint-message {
+    font-size: 10.5pt;
+}
+
+.login-dialog-user-list-view {
+    -st-vfade-offset: 1em;
+}
+
+.login-dialog-user-list {
+    spacing: 12px;
+    padding: .2em;
+}
+
+.login-dialog-user-list-item {
+    border-radius: 2px;
+    padding: .2em;
+}
+
+.login-dialog-user-list-item:ltr {
+    padding-right: 1em;
+}
+
+.login-dialog-user-list-item:rtl {
+    padding-left: 1em;
+}
+
+.login-dialog-user-list-item .login-dialog-user-list-item-name {
+    font-size: 20pt;
+    padding-left: 1em;
+}
+
+.login-dialog-user-list:expanded .login-dialog-user-list-item {
+    color: #666666;
+}
+
+.login-dialog-user-list-item,
+.login-dialog-user-list-item:hover .login-dialog-user-list-item-name,
+.login-dialog-user-list:expanded .login-dialog-user-list-item:focus .login-dialog-user-list-item-name,
+.login-dialog-user-list:expanded .login-dialog-user-list-item:logged-in {
+    color: white;
+    /*text-shadow: black 0px 2px 2px;*/
+}
+
+.login-dialog-user-list-item:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.login-dialog-user-list:expanded .login-dialog-user-list-item:focus {
+    background-color: rgba(255,255,255,0.33);
+}
+
+.login-dialog-user-list:expanded .login-dialog-user-list-item:logged-in {
+    background-image: url("logged-in-indicator.svg");
+    background-size: contain;
+}
+
+.login-dialog-user-list-item-text-box {
+    padding: 0 0.5em;
+}
+
+.login-dialog-user-list-item .login-dialog-timed-login-indicator {
+    background-color: rgba(0,0,0,0.0);
+    height: 2px;
+}
+
+.login-dialog-user-list-item:focus .login-dialog-timed-login-indicator {
+    background-color: #8b8b8b;
+}
+
+.login-dialog-user-list-item-icon {
+    border: 1px solid #242424;
+    border-radius: 2px;
+    width: 64px;
+    height: 64px;
+}
+
+.login-dialog-not-listed-label {
+    font-size: 10.5pt;
+    font-weight: 100;
+    color: #666666;
+    padding-top: 1em;
+}
+
+.login-dialog-not-listed-button:focus .login-dialog-not-listed-label,
+.login-dialog-not-listed-button:hover .login-dialog-not-listed-label {
+    color: #E8E8E8;
+}
+
+.login-dialog-username {
+    font-size: 36pt;
+    font-weight: 100;
+    text-align: left;
+    padding-left: 15px;
+    /*text-shadow: black 4px 4px 3px 0px;*/
+}
+
+.login-dialog-prompt-layout {
+    padding-top: 24px;
+    padding-bottom: 12px;
+    spacing: 8px;
+}
+
+.login-dialog-prompt-label {
+    color: #eeeeee;
+    font-size: 14px;
+}
+
+.login-dialog-prompt-entry {
+    width: 15em;
+}
+
+.login-dialog-session-list {
+    color: #ffffff;
+    font-size: 10.5pt;
+}
+
+.login-dialog-session-list-button {
+    padding: 4px;
+}
+
+.login-dialog-session-list-button:focus {
+    background-color: #4c4c4c;
+}
+
+.login-dialog-session-list-button:active {
+    background-color: #4c4c4c;
+}
+
+.login-dialog-session-list-button:hover {
+    font-weight: normal;
+}
+
+.login-dialog-session-list-scroll-view {
+    background-gradient-start: rgba(80,80,80,0.3);
+    background-gradient-end: rgba(80,80,80,0.7);
+    background-gradient-direction: vertical;
+    box-shadow: inset 0px 2px 4px rgba(0,0,0,0.9);
+    border-radius: 8px;
+    border: 1px solid rgba(80,80,80,1.0);
+    padding: .5em;
+}
+
+.login-dialog-session-list-item:focus {
+    background-color: #666666;
+}
+
+.login-dialog-session-list-triangle {
+    padding-right: .5em;
+}
+
+.login-dialog-session-list-item-box {
+    spacing: .25em;
+}
+
+.login-dialog-session-list-item-dot {
+    width: .75em;
+    height: .75em;
+}
 
 
+/*.login-dialog .modal-dialog-button {
+    border: 1px solid #101010;
+    background: #242424;
+    border-radius: 2px;
+    padding: 3px 18px;
+}
 
+.login-dialog .modal-dialog-button:focus,
+.login-dialog .modal-dialog-button:default,
+.login-dialog .modal-dialog-button:default:focus,
+.login-dialog .modal-dialog-button:default:hover {
+    border: 1px solid #0099CC;
+}*/
 
+.login-dialog .modal-dialog-button:default:active,
+.login-dialog .modal-dialog-button:default:pressed {
+/*    background-gradient-start: #436d9f;
+    background-gradient-end: #74a0d0;*/
+}
 
+.login-dialog-message-warning {
+    color: rgb(204, 0, 0);
+}
 
+.unlock-dialog-user-name-container {
+    spacing: .4em;
+}
 
+/* Screen shield */
 
+.screen-shield-background {
+    background: black;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.9);
+}
 
+#lockDialogGroup {
+    background: url(assets/stripes.svg);
+    /*background: #2e3436 url(noise-texture.png);*/
+    background-repeat: repeat;
+}
 
+.screen-shield-arrows {
+    padding-bottom: 3em;
+}
 
+.screen-shield-arrows Gjs_Arrow {
+    color: white;
+    width: 80px;
+    height: 48px;
+    -arrow-thickness: 10px;
+    -arrow-shadow: 0 1px 1px rgba(0,0,0,0.4);
+}
 
+.screen-shield-contents-box {
+    spacing: 48px;
+}
 
+.screen-shield-clock {
+    color: white;
+    text-shadow: 0px 1px 2px rgba(0,0,0,0.6);
+    font-weight: normal;
+    text-align: center;
+    padding-bottom: 1.5em;
+}
 
+.screen-shield-clock-time {
+    font-size: 72pt;
+    text-shadow: 0px 2px 2px rgba(0,0,0,0.4);
+}
 
+.screen-shield-clock-date {
+    font-size: 28pt;
+}
 
+#screenShieldNotifications {
+    border-radius: 8px;
+    background-color: rgba(0.0, 0.0, 0.0, 0.9);
+    border: 2px solid #868686;
+    max-height: 500px;
+    padding: 18px 0;
+    box-shadow: .5em .5em 20px rgba(0, 0, 0, 0.5);
+}
 
+.screen-shield-notifications-box {
+    spacing: 18px;
+}
 
+.screen-shield-notification-source {
+    padding: 0 24px;
+    spacing: 5px;
+}
 
+.screen-shield-notification-label {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #babdb6;
+}
 
+/* Remove background from notifications, otherwise
+   opacity is doubled and they look darker
+*/
+/*.screen-shield-notifications-box .notification {
+    background-color: transparent;
+}*/
 
-
+/* Override padding on resident notifications, since
+   the notifications box has its own spacing
+*/
+.screen-shield-notifications-box .summary-notification-stack-scrollview {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
