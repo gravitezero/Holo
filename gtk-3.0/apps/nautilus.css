@@ -4,16 +4,16 @@ NautilusWindow * {
 
 /* desktop mode */
 .nautilus-desktop.nautilus-canvas-item {
-	color: @bg_color;
+	color: @fgcolor;
 	text-shadow: 1 1 alpha (#000000, 0.8);
 }
 
 .nautilus-desktop.nautilus-canvas-item:active {
 	background-image: none;
-	background-color: alpha (@bg_color, 0.84);
+	background-color: alpha (@bgcolor, 0.84);
 	border-radius: 2;
 
-	color: @fg_color;
+	color: @fgcolor;
 }
 
 .nautilus-desktop.nautilus-canvas-item:selected {
@@ -36,7 +36,7 @@ NautilusXContentBar.info,
 NautilusSearchBar.info,
 NautilusQueryEditor.info {
 	/* this background-color controls the symbolic icon in the entry */
-	background-color: mix (@fg_color, @base_color, 0.3);
+	background-color: mix (@fgcolor, @basecolor, 0.3);
 	border-radius: 0;
 	border-style: solid;
 	border-width: 0 1 1 1;
@@ -46,13 +46,12 @@ NautilusSearchBar .entry {
 }
 
 .nautilus-cluebar-label {
-	color: @fg_color;
-	font: bold;
+	color: @fgcolor;
 }
 
 #nautilus-search-button *:active,
 #nautilus-search-button *:active:prelight {
-	color: @fg_color;
+	color: @fgcolor;
 }
 
 NautilusFloatingBar {
@@ -66,7 +65,7 @@ NautilusFloatingBar {
 }
 
 NautilusFloatingBar .button {
-	background-color: alpha (@base_color, 0.0);
+	background-color: alpha (@base_color, 0.5);
 	background-image: none;
 
 	border-style: none;
@@ -79,19 +78,14 @@ NautilusFloatingBar .button {
 /* sidebar */
 NautilusWindow .sidebar,
 NautilusWindow .sidebar .view {
-	background-color: @bg_color;
+	background-color: @bgcolor;
 }
 
 NautilusWindow .sidebar .frame {
-	border-width: 0 1 0 1;
-	border-style: solid;
-	border-color: shade (@toolbar_border, 1.0);
-	border-left-color: @transparent;
-	border-radius: 0;
 }
 
 NautilusWindow .sidebar .scrollbar.trough {
-	background-color: @bg_color;
+	background-color: @bgcolor;
 }
 
 NautilusWindow > GtkTable > .pane-separator {

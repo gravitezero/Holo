@@ -15,6 +15,18 @@
 @define-color tooltip_bg_color #F5F5B5;
 @define-color tooltip_fg_color #2c2c2c;
 
+/* new color scheme */
+@define-color bgcolor #282828;
+@define-color fgcolor #ffffff;
+@define-color basecolor #ffffff;
+@define-color textcolor #ffffff;
+@define-color selectedbgcolor #0099cc;
+@define-color selectedfgcolor #ffffff;
+@define-color tooltipbgcolor #F5F5B5;
+@define-color tooltipfgcolor #2c2c2c;
+
+@define-color toolbarborder #ccc;
+
 /* other color schemes could simply override these */
 @define-color theme_bg_color @bg_color;
 @define-color theme_fg_color @fg_color;
