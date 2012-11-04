@@ -564,6 +564,7 @@ StTooltip StLabel {
     padding: 10px 5px;
     background: rgba(0, 0, 0, 0.8);
     width: 1000px;
+    height: 18px;
 }
 
 .window-close {
