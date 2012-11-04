@@ -212,17 +212,17 @@ StTooltip StLabel {
 }
 
 .toggle-switch-us {
-    background-image: url("assets/toggle-off-us.svg");
+    background-image: url("assets/toggle-off-us.png");
 }
 .toggle-switch-us:checked {
-    background-image: url("assets/toggle-on-us.svg");
+    background-image: url("assets/toggle-on-us.png");
 }
 
 .toggle-switch-intl {
-    background-image: url("assets/toggle-off-intl.svg");
+    background-image: url("assets/toggle-off-intl.png");
 }
 .toggle-switch-intl:checked {
-    background-image: url("assets/toggle-on-intl.svg");
+    background-image: url("assets/toggle-on-intl.png");
 }
 
 .nm-menu-item-icons {
