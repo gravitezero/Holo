@@ -9,7 +9,7 @@
 @define-color bg_color #f2f2f2;
 @define-color fg_color #2c2c2c;
 @define-color base_color #ffffff;
-@define-color text_color #2c2c2c;
+@define-color text_color #101010;
 @define-color selected_bg_color #0099cc;
 @define-color selected_fg_color #ffffff;
 @define-color tooltip_bg_color #F5F5B5;
@@ -51,6 +51,7 @@
 @define-color selected_bg_color_alt #a3d7ea;
 @define-color selected_fg_color_alt #2c2c2c;
 @define-color selected_bg_color_alt2 #33b5e5;
+@define-color selectedbgcoloralt2 #33b5e5;
 @define-color titlebar_color #282828;
 @define-color text_color_primary_light #111;
 @define-color text_color_secondary_light #ccc;
