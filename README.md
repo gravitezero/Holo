@@ -15,10 +15,10 @@ And also, I made some changes that might appears quite odd if not used if Faenza
 Usability & work progression
 ================
 
-Gnome-shell: partly usable, reviews welcome
-Gtk+3: not usable, working on it
-Gtk+2: partly usable, I am not gonna fix this
-Metacity: usable
+* **Gnome-shell**: partly usable, reviews welcome    
+* **Gtk+3**: not usable, working on it    
+* **Gtk+2**: partly usable, I am not gonna fix this    
+* **Metacity**: usable    
 
 
 Installation
