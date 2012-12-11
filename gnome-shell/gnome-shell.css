@@ -1783,18 +1783,28 @@ StTooltip StLabel {
     border-image: url('assets/workspace.svg') 10 10 10 10 stretch;
 }
 
-.ws-switcher-active-up, .ws-switcher-active-down {
+.ws-switcher-active-left, 
+.ws-switcher-active-right, 
+.ws-switcher-active-up, 
+.ws-switcher-active-down {
     height: 96px;
     border-image: url('assets/workspace-active.svg') 10 10 10 10 stretch;
+    background-image: url("assets/ws-switch-arrow-up.svg");
 }
 
 .ws-switcher-active-up {
     background-image: url("assets/ws-switch-arrow-up.svg");
 }
-
 .ws-switcher-active-down {
     background-image: url("assets/ws-switch-arrow-down.svg");
 }
+.ws-switcher-active-left {
+    background-image: url("assets/ws-switch-arrow-left.svg");
+}
+.ws-switcher-active-right {
+    background-image: url("assets/ws-switch-arrow-right.svg");
+}
+
 
 
 /* Modal Dialogs */

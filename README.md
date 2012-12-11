@@ -12,6 +12,15 @@ This repository bring 2 changes from Tiheum works :
 
 And also, I made some changes that might appears quite odd if not used if Faenza or Faience icon theme.
 
+Usability & work progression
+================
+
+* **Gnome-shell**: partly usable, reviews welcome    
+* **Gtk-3**: not usable, working on it    
+* **Gtk-2**: partly usable, I am not gonna fix this    
+* **Metacity**: usable    
+
+
 Installation
 ============
 
