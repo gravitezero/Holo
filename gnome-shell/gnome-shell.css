@@ -103,7 +103,9 @@ StTooltip StLabel {
 }
 
 .popup-submenu-menu-item:open {
-    border-image: url('assets/popup-sub-menu.svg');
+    /*border-image: url('assets/popup-sub-menu.svg');*/
+    background-image: url('assets/stripes.svg');
+    background-repeat: repeat;
 }
 
 .popup-sub-menu {
